@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Commande et reservation</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header>
+        <section>
+            <div class="logo">
+                <h3>ONOMO <span id="nuit_color">BEACH </span> </h3>
+            </div>
+            
+        </section>
+        <div class="card">
+            <div class="card1"></div>
+            <div class="card1"></div>
+            <div class="card1"></div>
+        </div>
+        <menu>
+            <nav>        
+                <ul>
+                    <li><a href="./chambres.html">NOS CHAMBRES</a></li>
+                    <li><a href="./service.html">NOS SERVICES</a></li>
+                </ul>
+            </nav>
+        </menu>
+    </header>
+
+    <div class="container">
+        <div class="content-container">
+            <h2>Réservations de Chambres</h2>
+
+            <form action="http://localhost:5000/reservation/submit" method="post">
+                <label for="nom">Nom :</label>
+                <input type="text" id="nom" name="nom" required>                
+                
+                <label for="typeChambre">Choisissez le type de chambre :</label>
+                <select id="typeChambre" name="typeChambre" required>
+                    <option value="S">Chambre Standard</option>
+                    <option value="L">Chambre Deluxe</option>
+                </select>
+            
+                <label for="date_arrivee">Date d'arrivée :</label>
+                <input type="date" id="date_arrivee" name="dateArrivee" required>
+            
+                <label for="date_depart">Date de départ :</label>
+                <input type="date" id="date_depart" name="dateDepart" required>
+            
+                <button type="submit"><a href="./Acceuil.html">Envoyer la Réservation</a></button>
+            </form>
+        </div>
+    </div>
+
+    <div class="container-com">
+        <div class="content-container">
+            <h2>Commandes</h2>
+
+            <form action="http://localhost:5000/commande/submit" method="post">
+                <label for="nom">Nom :</label>
+                <input type="text" id="nom" name="nom" required> 
+                
+                <label for="plat">Choisissez votre plat :</label>
+                <select id="plat" name="plat" required>
+                    <option value=""></option>
+                    <option value="Boeuf Mijoté">Boeuf Mijoté</option>
+                    <option value="Sauce au Vin Rouge et aux Champignons">Sauce au Vin Rouge et aux Champignons</option>
+                    <option value="Avocat a la prune">Avocat a la prune</option>
+                    <option value="Omelette radieux">Omelette radieux</option>
+                    <option value="Saumon avocado">Saumon avocado</option>
+                    <option value="Mixture de pate">Mixture de pate</option>
+                    <option value="Spaghetti au Vinaigre et a la courgette">Spaghetti au Vinaigre et a la courgette</option>
+                    <option value="Spaghetti Bolognaise">Spaghetti Bolognaise</option>
+                </select>
+
+                <label for="date">Date de commande :</label>
+                <input type="datetime-local" id="date" name="date" required>
+
+                <button type="submit"><a href="./Acceuil.html">Envoyer la Commande</a></button>
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>

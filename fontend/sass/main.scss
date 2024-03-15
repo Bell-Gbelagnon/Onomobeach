@@ -1,0 +1,319 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url(../Assets/c11.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: fixed;
+    // la barre de naviguation
+    header {
+        position: fixed;
+        z-index: 10;
+        height: 100px;
+        width: 100%;
+        background-color: rgb(163, 163, 245);
+        backdrop-filter: blur(50px);
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        top: 0px;
+        .logo {
+            height: 75%;
+            width: 75%;
+            padding: 0;
+            font-size: 25px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            animation: animation1 4s;
+            color: rgb(47, 47, 47);
+            .h3 {
+                #nuit_color{
+                    color: aqua;
+                } 
+                font-size: 28px;
+                animation: animation1 1s;
+            }
+        }
+        @keyframes animation1 {
+            0% {
+                transform: translateX(200px);
+                opacity: 0;
+            }
+            100% {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+        .card{
+            display: flex;
+            justify-content: space-around;
+            .card1{
+                border: 1px solid rgb(53, 51, 51);
+                background-color: #462c2c;
+                border-radius: 100%;
+                width: 40px;
+                height: 40px;
+                margin: 10px;
+                animation: bienvenue1 1s infinite;
+            }
+            @keyframes bienvenue1 {
+                0% {
+                    transform: translateX(0);
+                    opacity: 0;
+                    color: red;
+                }
+                100% {
+                    transform: translateX(0);
+                    opacity: 1;
+                    color: yellow;
+                }
+            }
+        }
+        menu {
+            margin: 0;
+            padding: 0;
+            height: 80%;
+            width: 30%;
+            nav {
+                height: 100%;
+                width: 100%;
+                ul {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    height: 100%;
+                    width: 100%;
+                    list-style-type: none;
+                    margin: 0;
+                    li a {
+                        text-decoration: none;
+                        color: black;
+                        font-size: 19px;
+                        margin: 20px;
+                    }
+                    :hover{
+                        color: red;
+                        font-size: 22px;
+                    }
+                }
+            }
+        }
+    }
+    //contenue de la page acceuil
+    main {
+        text-align: center;
+        justify-content: center;
+        position: relative;
+        padding: 100px;
+        top: 5pc;
+        .containerbox {
+            justify-content: center;
+            margin-top: 250px;
+            h2 {
+                color: #0e0a0a;
+                font-size: 100px;
+                animation: bienvenue 5s;
+            }
+            @keyframes bienvenue {
+                0% {
+                    transform: translateX(0);
+                    opacity: 0;
+                }
+                100% {
+                    transform: translateX(0);
+                    opacity: 1;
+                }
+            }
+            span {
+                color: rgb(1, 2, 2);
+                font-size: 60px;
+            }
+            p {
+                color: #030000;
+                font-size: 20px;
+            }
+        }
+    }
+    footer{
+        background-color: rgb(255, 255, 255);
+        height: 100%;
+        width: 100%;
+        position: relative;
+        color: rgb(2, 74, 207);
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        top: 5pc;
+        section{
+            display: flex;
+            justify-content: space-between;
+            list-style-type: none;
+            list-style: none;
+            ul{
+                list-style: none;
+                margin-left: 60px;
+                margin: 20px;
+                li{
+                    margin: 15px;
+                    &:hover {
+                        transform: scale(1.2);
+                        color: rgb(43, 82, 212);
+                        animation: rotationtext 3s;
+                    }
+                    @keyframes rotationtext {
+                        0%, 100%{
+                        transform: translateY(5px);
+                        }
+                        50%{
+                            transform: translateY(10px);
+                        }
+                        0%, 100% {
+                            transform: translateY(5px);
+                        }
+                        50% {
+                            transform: translateY(10px);
+                        }
+                    }
+                }
+            }
+        }
+    
+    }
+}
+
+
+//contenue de la page inscription et connexion
+.auth-section {
+    padding: 50px 0;
+    top: 15pc;
+    position: relative;
+    .container {
+        text-align: center;
+        h2 {
+        margin-bottom: 20px;
+        }
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: transparent;
+            backdrop-filter: blur(100px);
+            border-radius: 5px;
+            input[type=text],
+            input[type=password],
+            input[type=email] {
+                width: 100%;
+                margin-bottom: 15px;
+                padding: 10px;
+                font-size: 16px;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+                box-sizing: border-box;
+            }
+            input[type=submit] {
+                width: 100%;
+                padding: 10px;
+                font-size: 16px;
+                background-color: #007bff;
+                color: white;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+//contenue des pages chambres et service
+.chambreservice {
+    padding: 2rem;
+    position: relative;
+    top: 90px;
+    h1 {
+        text-align: center;
+    }
+    .room-list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        .room {
+            border: 2px solid #7c7c7c;
+            border-radius: 5%;
+            padding: 1rem;
+            margin: 1rem;
+            text-align: center;
+            width: 250px;
+            transition: transform 0.3s ease-in-out;
+            background-color: rgb(153, 154, 252);
+            &:hover {
+                transform: scale(1.05);
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            }
+            img {
+                max-width: 100%;
+                border-radius: 8px;
+            }
+        }
+        .status {
+            color: green;
+        }
+    }
+    .tet {
+      resize: none;
+    }
+}
+
+//contenue de la pages reservation et commande
+
+
+.content-container {
+    position: relative;
+    top: 10pc;
+    h2{
+        text-align: center;
+    }
+    form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+        label {
+            margin-bottom: 16px;
+        }
+
+        select,
+        input[type="date"],
+        input[type="datetime-local"],
+        input[type="number"],
+        input[type="text"] {
+            padding: 8px;
+            margin-bottom: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            outline: none;
+            width: 50%;
+            text-align: center;
+        }
+
+        button { 
+            padding: 10px;
+            background-color: #3498db;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            width: 10pc;
+            margin-top: 16px;
+
+            &:hover {
+                background-color: #2980b9;
+            }
+        }
+    }
+}

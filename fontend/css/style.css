@@ -1,0 +1,308 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-image: url(../Assets/c11.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: fixed;
+}
+body header {
+  position: fixed;
+  z-index: 10;
+  height: 100px;
+  width: 100%;
+  background-color: rgb(163, 163, 245);
+  backdrop-filter: blur(50px);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  top: 0px;
+}
+body header .logo {
+  height: 75%;
+  width: 75%;
+  padding: 0;
+  font-size: 25px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  animation: animation1 4s;
+  color: rgb(47, 47, 47);
+}
+body header .logo .h3 {
+  font-size: 28px;
+  animation: animation1 1s;
+}
+body header .logo .h3 #nuit_color {
+  color: aqua;
+}
+@keyframes animation1 {
+  0% {
+    transform: translateX(200px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+body header .card {
+  display: flex;
+  justify-content: space-around;
+}
+body header .card .card1 {
+  border: 1px solid rgb(53, 51, 51);
+  background-color: #462c2c;
+  border-radius: 100%;
+  width: 40px;
+  height: 40px;
+  margin: 10px;
+  animation: bienvenue1 1s infinite;
+}
+@keyframes bienvenue1 {
+  0% {
+    transform: translateX(0);
+    opacity: 0;
+    color: red;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+    color: yellow;
+  }
+}
+body header menu {
+  margin: 0;
+  padding: 0;
+  height: 80%;
+  width: 30%;
+}
+body header menu nav {
+  height: 100%;
+  width: 100%;
+}
+body header menu nav ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  list-style-type: none;
+  margin: 0;
+}
+body header menu nav ul li a {
+  text-decoration: none;
+  color: black;
+  font-size: 19px;
+  margin: 20px;
+}
+body header menu nav ul :hover {
+  color: red;
+  font-size: 22px;
+}
+body main {
+  text-align: center;
+  justify-content: center;
+  position: relative;
+  padding: 100px;
+  top: 5pc;
+}
+body main .containerbox {
+  justify-content: center;
+  margin-top: 250px;
+}
+body main .containerbox h2 {
+  color: #0e0a0a;
+  font-size: 100px;
+  animation: bienvenue 5s;
+}
+@keyframes bienvenue {
+  0% {
+    transform: translateX(0);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+body main .containerbox span {
+  color: rgb(1, 2, 2);
+  font-size: 60px;
+}
+body main .containerbox p {
+  color: #030000;
+  font-size: 20px;
+}
+body footer {
+  background-color: rgb(255, 255, 255);
+  height: 100%;
+  width: 100%;
+  position: relative;
+  color: rgb(2, 74, 207);
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  top: 5pc;
+}
+body footer section {
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
+  list-style: none;
+}
+body footer section ul {
+  list-style: none;
+  margin-left: 60px;
+  margin: 20px;
+}
+body footer section ul li {
+  margin: 15px;
+}
+body footer section ul li:hover {
+  transform: scale(1.2);
+  color: rgb(43, 82, 212);
+  animation: rotationtext 3s;
+}
+@keyframes rotationtext {
+  0%, 100% {
+    transform: translateY(5px);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+  0%, 100% {
+    transform: translateY(5px);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+}
+
+.auth-section {
+  padding: 50px 0;
+  top: 15pc;
+  position: relative;
+}
+.auth-section .container {
+  text-align: center;
+}
+.auth-section .container h2 {
+  margin-bottom: 20px;
+}
+.auth-section .container form {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: transparent;
+  backdrop-filter: blur(100px);
+  border-radius: 5px;
+}
+.auth-section .container form input[type=text],
+.auth-section .container form input[type=password],
+.auth-section .container form input[type=email] {
+  width: 100%;
+  margin-bottom: 15px;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+.auth-section .container form input[type=submit] {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.chambreservice {
+  padding: 2rem;
+  position: relative;
+  top: 90px;
+}
+.chambreservice h1 {
+  text-align: center;
+}
+.chambreservice .room-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.chambreservice .room-list .room {
+  border: 2px solid #7c7c7c;
+  border-radius: 5%;
+  padding: 1rem;
+  margin: 1rem;
+  text-align: center;
+  width: 250px;
+  transition: transform 0.3s ease-in-out;
+  background-color: rgb(153, 154, 252);
+}
+.chambreservice .room-list .room:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.chambreservice .room-list .room img {
+  max-width: 100%;
+  border-radius: 8px;
+}
+.chambreservice .room-list .status {
+  color: green;
+}
+.chambreservice .tet {
+  resize: none;
+}
+
+.content-container {
+  position: relative;
+  top: 10pc;
+}
+.content-container h2 {
+  text-align: center;
+}
+.content-container form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.content-container form label {
+  margin-bottom: 16px;
+}
+.content-container form select,
+.content-container form input[type=date],
+.content-container form input[type=datetime-local],
+.content-container form input[type=number],
+.content-container form input[type=text] {
+  padding: 8px;
+  margin-bottom: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  outline: none;
+  width: 50%;
+  text-align: center;
+}
+.content-container form button {
+  padding: 10px;
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  width: 10pc;
+  margin-top: 16px;
+}
+.content-container form button:hover {
+  background-color: #2980b9;
+}
+
+/*# sourceMappingURL=style.css.map */
